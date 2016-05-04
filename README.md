@@ -1,2 +1,3 @@
 # Project1
-Testing
+Testing \n
+Hi, my name is Chuan.
