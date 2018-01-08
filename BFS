@@ -1,7 +1,7 @@
 void BFS(Tree* t)
 {
     queue<Tree*> q;
-    q.push(t);
+    q.push(t); // the root one
     while (!q.empty( ))
     { 
         Tree* curr = q.front( );
@@ -11,3 +11,24 @@ void BFS(Tree* t)
         if (curr->right) q.push( curr->right);
     }
 }
+
+// in BFS, if there is a need to know the current level, use a NULL maker.
+
+/*
+q.push( t);
+q.push( NULL);
+while(!q.empty( ))
+{
+    …
+    Tree* curr = q.front( );
+    q.pop( );
+    if (NULL == curr && !q.empty( ) )
+    {
+        q.push(NULL );
+    }
+    else
+    {
+        ... 
+    }
+}
+*/
