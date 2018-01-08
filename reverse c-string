@@ -1,0 +1,18 @@
+void reverse(char* s)
+{
+    char* end = s;
+    while(*end)
+    {
+        end++;
+    }
+    end- -;
+    while( s<end)
+    {
+        char tmp;
+        tmp = *s;
+        *s = *end;
+        *end = tmp;
+        s++;
+        end—;
+    }
+}
