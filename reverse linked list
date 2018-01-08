@@ -1,0 +1,14 @@
+void reverse(Node* head)
+{
+    Node* p = head;
+    Node* q = NULL;
+    while( p!= NULL)
+    {
+        Node* tmp = p->next; // save p’s next to tmp
+        p->next = q; // let p points to its previous, which is where q points to 
+        // p->prev=tmp; do this if it is a doubly linked list
+        q = p; // move q forwards
+        p = tmp; // move p forwards
+    }
+    return q;
+}
