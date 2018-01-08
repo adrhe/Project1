@@ -1,0 +1,26 @@
+void deleteNthLatest(Node* head)
+{
+        ListNode* p,q=head;
+        for(int i=0;i<n;i++)
+        {
+            q=q->next;
+        }
+        if (q==NULL) // case 1-it is the first
+        {
+            head=p->next;
+            delete p;
+            return head;
+        }
+        else 
+        {
+            while(q->next!=NULL)
+            {
+                p=p->next;
+                q=q->next;
+            }
+            ListNode* tmp=p->next->next;
+            delete p->next;
+            p->next=tmp;
+            return head;
+        }   
+}
