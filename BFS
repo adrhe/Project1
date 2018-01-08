@@ -1,0 +1,13 @@
+void BFS(Tree* t)
+{
+    queue<Tree*> q;
+    q.push(t);
+    while (!q.empty( ))
+    { 
+        Tree* curr = q.front( );
+        q.pop( );
+        print(curr->data);
+        if (curr->left) q.push( curr->left);
+        if (curr->right) q.push( curr->right);
+    }
+}
